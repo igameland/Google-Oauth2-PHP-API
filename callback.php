@@ -10,10 +10,10 @@ require_once('src/contrib/apiOauth2Service.php');
 $client = new apiClient();
  // Visit https://code.google.com/apis/console to generate your
 // oauth2_client_id, oauth2_client_secret, and to register your oauth2_redirect_uri.
-$client->setClientId(Application::get_config('key.gg_client_id'));
-$client->setClientSecret(Application::get_config('key.gg_client_secret'));
-$client->setRedirectUri(Application::$config['http_base_url'] . 'members/gg_callback');
-
+$client->setClientId('your client id');
+$client->setClientSecret('your client secrect');
+$client->setRedirectUri(YOUR_DOMAIN. '/callback.php'); //make sure this one matches your setting in google api console.
+ 
 $oauth2 = new apiOauth2Service($client);
 
 if (isset($_GET['code'])) {
