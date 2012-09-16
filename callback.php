@@ -19,6 +19,10 @@ $oauth2 = new apiOauth2Service($client);
 if (isset($_GET['code'])) {
     try{
       $client->authenticate($_GET['code']);
+      
+      //for demo purpose, this is stright through.. in real world app
+      //you want to place your login here to save the access_token 
+      //into db..
       $access_token = $client->getAccessToken();
       $client->setAccessToken($access_token);
        
