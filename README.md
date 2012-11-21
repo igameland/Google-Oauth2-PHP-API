@@ -10,3 +10,4 @@ redirect.php //will echo out the auth url to google
 calback.php //display the auth user's email and profile.
 
 Let me know if you have any questions.. you can email me at support@igameland.com
+For a live site demo, please visit http://www.igameland.com
